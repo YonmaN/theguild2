@@ -50,6 +50,32 @@ return array(
                     ),
                 ),
             ),
+            'players' => array(
+                'type'    => 'Literal',
+                'options' => array(
+                    'route'    => '/players',
+                    'defaults' => array(
+                        '__NAMESPACE__' => 'Application\Controller',
+                        'controller'    => 'Player',
+                        'action'        => 'index',
+                    ),
+                ),
+                'may_terminate' => true,
+                'child_routes' => array(
+                    'default' => array(
+                        'type'    => 'Segment',
+                        'options' => array(
+                            'route'    => '/[:playerId[/:action]]',
+                            'constraints' => array(
+                                'controller' => '[0-9]*',
+                                'action'     => '[a-zA-Z][a-zA-Z0-9_-]*',
+                            ),
+                            'defaults' => array(
+                            ),
+                        ),
+                    ),
+                ),
+            ),
         ),
     ),
     'service_manager' => array(
@@ -60,6 +86,9 @@ return array(
         'aliases' => array(
             'translator' => 'MvcTranslator',
         ),
+        'factories' => array(
+        	'navigation' => 'Zend\Navigation\Service\DefaultNavigationFactory',
+        )
     ),
     'translator' => array(
         'locale' => 'en_US',
@@ -73,7 +102,8 @@ return array(
     ),
     'controllers' => array(
         'invokables' => array(
-            'Application\Controller\Index' => 'Application\Controller\IndexController'
+            'Application\Controller\Index' => 'Application\Controller\IndexController',
+            'Application\Controller\Player' => 'Application\Controller\PlayerController'
         ),
     ),
     'view_manager' => array(

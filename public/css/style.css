@@ -35,3 +35,44 @@ div.container a.brand {
     margin-left: 0;
     padding: 8px 20px 12px 40px;
 }
+
+ul.player-attributes {
+	margin:0;
+}
+
+ul.player-attributes li {
+	border-radius: 11px;
+	height:22px;
+	width:22px;
+	border: 2px solid black;
+	padding: 0px 5px;
+	font-weight: bold;
+}
+
+.humor {
+	background-color: red;
+	color: black;
+}
+
+.rules {
+	background-color: purple;
+	color: white;
+}
+
+.teamplay {
+	background-color: blue;
+	color: white;
+}
+
+.mobility {
+	background-color: gold;
+}
+
+.loyalty {
+	background-color: silver;
+}
+
+.hospitality {
+	background-color: green;
+	color: yellow;
+}

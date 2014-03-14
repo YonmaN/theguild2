@@ -1,0 +1,21 @@
+@CHARSET "utf-8";
+
+body {
+	direction: rtl;
+}
+
+.navbar-nav {
+	float: right;
+}
+
+.navbar-header {
+	float: right;
+}
+
+.navbar-nav>li{
+	float: right;
+}
+
+th, td {
+	text-align: right;
+}
