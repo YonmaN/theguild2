@@ -20,16 +20,52 @@
 		    </thead>
 		    <tbody class="table-striped table-hover">
 		    	<tr><td>יוני מנדס</td><td>
-		    	<ul class="player-attributes list-inline">
-		    		<li class="hospitality">5</li>
-		    		<li class="loyalty">5</li>
-		    		<li class="mobility">5</li>
-		    		<li class="teamplay">5</li>
-		    		<li class="rules">5</li>
-		    		<li class="humor">5</li>
+		    	<ul class="player-attributes list-inline no-list-indent">
+		    		<li class="hospitality" rating="5">5</li>
+		    		<li class="loyalty" rating="5">5</li>
+		    		<li class="mobility" rating="5">5</li>
+		    		<li class="teamplay" rating="5">5</li>
+		    		<li class="rules" rating="5">5</li>
+		    		<li class="humor" rating="5">5</li>
 		    	</ul>
 		    	</td><td>5 (שחקן מנוסה, שחקן אמיתי, קבוצתי)</td><td>לפני שנה</td><td>כן, מחפש קבוצה להנחות</td></tr>
 		    </tbody>
 	    </table>
     </div>
 </div>
+<script>
+  $(function() {
+    jQuery.each($( '.player-attributes li' ), function(key, item) {
+        var attribute = $(item).attr('class');
+        var attrValue = $(item).attr('rating');
+
+        $(item).tooltip({
+	      position: {
+	        my: "right top+10",
+	        at: "right+35 bottom",
+	        using: function( position, feedback ) {
+	          $( this ).css( position );
+	          $( "<div>" )
+	            .addClass( "arrow " + $(item).attr('class') )
+	            .addClass( feedback.vertical )
+	            .addClass( feedback.horizontal )
+	            .appendTo( this );
+	        },
+	      },
+	      items: "li",
+	      content: function() {
+	            return "<blockquote>\
+	            <p class=\"" + attribute + "\">ברוכים הבאים לסוויטה הנשיאותית</p>\
+	            <small>לא רק שאתה מארח כל משחק - אתה מארח כפייתי. אוכל, בידור, חדרי אורחים, אפילו צוות ניקיון מיוחד וכאלו שוקולדים על הכריות. בריכה בחוץ וספא חופשי אמרנו?</small>\
+	          </blockquote>";
+	        },
+	      tooltipClass: $(item).attr('class')
+    	});
+
+        /* $(item).on('tooltipclose', function( event, ui ) {
+        	console.log(this,event,ui);
+        	$(this).tooltip('open');
+        } ); */
+    });
+  });
+  </script>

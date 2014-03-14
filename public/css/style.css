@@ -47,32 +47,98 @@ ul.player-attributes li {
 	border: 2px solid black;
 	padding: 0px 5px;
 	font-weight: bold;
+	cursor: pointer;
 }
 
-.humor {
-	background-color: red;
+.humor, .humor:after {
+	background-color: rgb(223, 0, 0) !important;
 	color: black;
 }
 
-.rules {
-	background-color: purple;
-	color: white;
+.rules, .rules:after {
+	background-color: purple !important;
+	color: white !important;
 }
 
-.teamplay {
-	background-color: blue;
-	color: white;
+.teamplay, .teamplay:after {
+	background-color: blue !important;
+	color: white !important;
 }
 
-.mobility {
-	background-color: gold;
+.mobility, .mobility:after {
+	background-color: gold !important;
+	color: black !important;
 }
 
-.loyalty {
-	background-color: silver;
+.loyalty, .loyalty:after {
+	background-color: silver !important;
+	color: black !important;
 }
 
-.hospitality {
-	background-color: green;
-	color: yellow;
+.hospitality, .hospitality:after {
+	background-color: green !important;
+	color: yellow !important;
+}
+
+blockquote {
+	margin: 0;
+}
+
+table {
+	width: 100%
+}
+
+.no-list-indent {
+	-webkit-padding-start: 0;
+}
+
+/* tooltip */
+
+.ui-tooltip, .arrow:after {
+  background: black;
+  border: 2px solid white;
+}
+.ui-tooltip {
+  padding: 10px 20px;
+  color: white;
+  border-radius: 6px;
+  font: bold 14px "Helvetica Neue", Sans-Serif;
+  text-transform: uppercase;
+  box-shadow: 0 0 7px black;
+	max-width: 330px;
+}
+.arrow {
+background:transparent !important;
+  width: 70px;
+  height: 16px;
+  overflow: hidden;
+  position: absolute;
+  right: 50%;
+  margin-right: -35px;
+  bottom: -16px;
+}
+.arrow.top {
+  top: -16px;
+  bottom: auto;
+}
+.arrow.left {
+  right: 14%;
+}
+.arrow:after {
+  content: "";
+  position: absolute;
+  right: 20px;
+  top: -20px;
+  width: 25px;
+  height: 25px;
+  box-shadow: 6px 5px 9px -9px black;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  tranform: rotate(45deg);
+}
+.arrow.top:after {
+  bottom: -20px;
+  top: auto;
 }
