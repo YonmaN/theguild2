@@ -34,6 +34,20 @@
     </div>
 </div>
 <script>
+
+var tips = {};
+$(function(){
+	$.get('/tips', '', function(data){
+		$.each(data, function(index, item){
+			if (typeof tips[item.attribute] == 'undefined') {
+				tips[item.attribute] = {};
+			}
+			tips[item.attribute][item.rating] = item;
+		});
+	});
+});
+
+
   $(function() {
     jQuery.each($( '.player-attributes li' ), function(key, item) {
         var attribute = $(item).attr('class');
@@ -54,9 +68,10 @@
 	      },
 	      items: "li",
 	      content: function() {
+		      var tip = tips[attribute][attrValue];
 	            return "<blockquote>\
-	            <p class=\"" + attribute + "\">ברוכים הבאים לסוויטה הנשיאותית</p>\
-	            <small>לא רק שאתה מארח כל משחק - אתה מארח כפייתי. אוכל, בידור, חדרי אורחים, אפילו צוות ניקיון מיוחד וכאלו שוקולדים על הכריות. בריכה בחוץ וספא חופשי אמרנו?</small>\
+	            <p class=\"" + attribute + "\">" + tip.quote + "</p>\
+	            <small>"+tip.description+"</small>\
 	          </blockquote>";
 	        },
 	      tooltipClass: $(item).attr('class')

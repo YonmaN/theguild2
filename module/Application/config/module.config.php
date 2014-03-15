@@ -20,6 +20,16 @@ return array(
                     ),
                 ),
             ),
+       		'tips' => array(
+   				'type'    => 'Literal',
+        		'options' => array(
+        			'route'    => '/tips',
+        			'defaults' => array(
+        				'__NAMESPACE__' => 'Application\Controller',
+        				'controller'    => 'Tips',
+        			),
+        		),
+       		),
             // The following is a route to simplify getting started creating
             // new controllers and actions without needing to create a new
             // module. Simply drop new controllers in, and you can access them
@@ -103,7 +113,8 @@ return array(
     'controllers' => array(
         'invokables' => array(
             'Application\Controller\Index' => 'Application\Controller\IndexController',
-            'Application\Controller\Player' => 'Application\Controller\PlayerController'
+            'Application\Controller\Player' => 'Application\Controller\PlayerController',
+            'Application\Controller\Tips' => 'Application\Controller\TipsController'
         ),
     ),
     'view_manager' => array(
@@ -120,6 +131,9 @@ return array(
         ),
         'template_path_stack' => array(
             __DIR__ . '/../view',
+        ),
+        'strategies' => array(
+        	'ViewJsonStrategy',
         ),
     ),
     // Placeholder for console routes
