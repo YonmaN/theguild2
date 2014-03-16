@@ -16,10 +16,7 @@
  * most users, however, feel free to configure autoloading however you'd like.
  */
 
-// Composer autoloading
-if (file_exists('vendor/autoload.php')) {
-    $loader = include 'vendor/autoload.php';
-}
+define('APP_ROOT_DIR', __DIR__);
 
 $zf2Path = false;
 

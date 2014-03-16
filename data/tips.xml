@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tooltips>
-    <tooltip id="humour" type="attribute">
+    <tooltip id="humor" type="attribute">
 		<name><![CDATA[הומור]]></name>
 		<headline><![CDATA[הומור]]></headline>
 		<scores>
@@ -132,7 +132,7 @@
 			</score>
 		</scores>
 	</tooltip>
-	<tooltip id="strictness" type="attribute">
+	<tooltip id="rules" type="attribute">
 		<name><![CDATA[גמישות]]></name>
                 <headline><![CDATA[גמישות במשחק]]></headline>
 		<scores>

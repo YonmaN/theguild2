@@ -15,13 +15,19 @@ use Zend\View\Model\JsonModel;
 class TipsController extends AbstractRestfulController
 {
     public function getList() {
-        return new JsonModel(array(
-        	array(
-	        	'attribute' => 'hospitality',
-        		'rating' => '5',
-        		'quote' => '',
-        		'description' => ''
-	        )
-        ));
+    	
+    	$tipsXml = simplexml_load_file(APP_ROOT_DIR . DIRECTORY_SEPARATOR . 'data/tips.xml');
+    	$tipsArray = array();
+    	foreach ($tipsXml->children() as $tip) {
+    		foreach ($tip->scores->children() as $score) {
+	    		$tipsArray[] = array(
+	    						'attribute' => (string)$tip['id'],
+	    						'rating' => (string)$score['value'],
+	    						'quote' => (string)$score->quote,
+	    						'description' => (string)$score->text
+	    				);
+    		}
+    	}
+        return new JsonModel($tipsArray);
     }
 }
