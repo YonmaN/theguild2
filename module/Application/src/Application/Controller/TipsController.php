@@ -21,6 +21,7 @@ class TipsController extends AbstractRestfulController
     	foreach ($tipsXml->children() as $tip) {
     		foreach ($tip->scores->children() as $score) {
 	    		$tipsArray[] = array(
+	    						'label' => (string)$tip->name,
 	    						'attribute' => (string)$tip['id'],
 	    						'rating' => (string)$score['value'],
 	    						'quote' => (string)$score->quote,

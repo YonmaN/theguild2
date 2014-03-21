@@ -104,7 +104,8 @@ $(function(){
 	      items: "li",
 	      content: function() {
 		      var tip = tips[attribute][attrValue];
-	            return "<blockquote>\
+	            return "<h4 class=\"pull-right\">" + tip.label + "</h4>\
+	            <blockquote class=\"pull-left\">\
 	            <p class=\"" + attribute + "\">" + tip.quote + "</p>\
 	            <small>"+tip.description+"</small>\
 	          </blockquote>";
