@@ -97,6 +97,7 @@ table {
 	width: 11px;
 	padding-top: 17px;
 	display: block;
+	white-space: nowrap;
 	 filter: flipv fliph;
     -webkit-transform:rotate(270deg);
     -moz-transform:rotate(270deg);
