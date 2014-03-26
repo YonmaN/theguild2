@@ -81,6 +81,7 @@ return array(
                                 'action'     => '[a-zA-Z][a-zA-Z0-9_-]*',
                             ),
                             'defaults' => array(
+                            	'action' => 'info'
                             ),
                         ),
                     ),

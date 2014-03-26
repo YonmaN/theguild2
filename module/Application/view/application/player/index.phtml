@@ -7,8 +7,8 @@
                 <h3 class="panel-title"><?php echo $this->translate('Follow Development') ?></h3>
             </div>
             <div class="panel-body">
-                <p><?php echo sprintf($this->translate('Zend Framework 2 is under active development. If you are interested in following the development of ZF2, there is a special ZF2 portal on the official Zend Framework website which provides links to the ZF2 %swiki%s, %sdev blog%s, %sissue tracker%s, and much more. This is a great resource for staying up to date with the latest developments!'), '<a href="http://framework.zend.com/wiki/display/ZFDEV2/Home">', '</a>', '<a href="http://framework.zend.com/zf2/blog">', '</a>', '<a href="https://github.com/zendframework/zf2/issues">', '</a>') ?></p>
-                <p><a class="btn btn-success pull-right" href="http://framework.zend.com/zf2" target="_blank"><?php echo $this->translate('ZF2 Development Portal') ?> &raquo;</a></p>
+                <p><?php echo sprintf($this->translate('Zend Framework 1 is under active development. If you are interested in following the development of ZF1, there is a special ZF1 portal on the official Zend Framework website which provides links to the ZF1 %swiki%s, %sdev blog%s, %sissue tracker%s, and much more. This is a great resource for staying up to date with the latest developments!'), '<a href="http://framework.zend.com/wiki/display/ZFDEV1/Home">', '</a>', '<a href="http://framework.zend.com/zf1/blog">', '</a>', '<a href="https://github.com/zendframework/zf1/issues">', '</a>') ?></p>
+                <p><a class="btn btn-success pull-right" href="http://framework.zend.com/zf1" target="_blank"><?php echo $this->translate('ZF1 Development Portal') ?> &raquo;</a></p>
             </div>
         </div>
     </div>
@@ -19,49 +19,49 @@
 		    	<tr><th>שם</th><th>גיל</th><th>תכונות</th><th>טיפוס/דרגה</th><th>נרשם</th><th>פנוי</th></tr>
 		    </thead>
 		    <tbody class="table-striped table-hover">
-		    	<tr><td>יוני מנדס</td><td>35 שנות אדם</td><td>
+		    	<tr><td><a href="<?php echo $this->url('players/default', array('playerId' => 1)) ?>">יוני מנדס</a></td><td>35 שנות אדם</td><td>
 		    	<ul class="player-attributes list-inline no-list-indent">
-		    		<li class="hospitality" rating="5">5</li>
-		    		<li class="mobility" rating="5">5</li>
-		    		<li class="teamplay" rating="5">5</li>
-		    		<li class="rules" rating="5">5</li>
-		    		<li class="humor" rating="5">5</li>
+		    		<li><span class="attribute-icon hospitality" rating="5">5</span></li>
+		    		<li><span class="attribute-icon mobility" rating="5">5</span></li>
+		    		<li><span class="attribute-icon teamplay" rating="5">5</span></li>
+		    		<li><span class="attribute-icon rules" rating="5">5</span></li>
+		    		<li><span class="attribute-icon humor" rating="5">5</span></li>
 		    	</ul>
 		    	</td><td>5 (שחקן מנוסה, תפקידיסט אמיתי, קבוצתי)</td><td>לפני שנה</td><td>כן, מחפש קבוצה להנחות</td></tr>
 		    	<tr><td>יוני מנדס</td><td>35 שנות אדם</td><td>
 		    	<ul class="player-attributes list-inline no-list-indent">
-		    		<li class="hospitality" rating="4">4</li>
-		    		<li class="mobility" rating="4">4</li>
-		    		<li class="teamplay" rating="4">4</li>
-		    		<li class="rules" rating="4">4</li>
-		    		<li class="humor" rating="4">4</li>
+		    		<li><span class="attribute-icon hospitality" rating="4">4</span></li>
+		    		<li><span class="attribute-icon mobility" rating="4">4</span></li>
+		    		<li><span class="attribute-icon teamplay" rating="4">4</span></li>
+		    		<li><span class="attribute-icon rules" rating="4">4</span></li>
+		    		<li><span class="attribute-icon humor" rating="4">4</span></li>
 		    	</ul>
 		    	</td><td>5 (שחקן מנוסה, תפקידיסט אמיתי, קבוצתי)</td><td>לפני שנה</td><td>כן, מחפש קבוצה להנחות</td></tr>
 		    	<tr><td>יוני מנדס</td><td>35 שנות אדם</td><td>
 		    	<ul class="player-attributes list-inline no-list-indent">
-		    		<li class="hospitality" rating="3">3</li>
-		    		<li class="mobility" rating="3">3</li>
-		    		<li class="teamplay" rating="3">3</li>
-		    		<li class="rules" rating="3">3</li>
-		    		<li class="humor" rating="3">3</li>
+		    		<li><span class="attribute-icon hospitality" rating="3">3</span></li>
+		    		<li><span class="attribute-icon mobility" rating="3">3</span></li>
+		    		<li><span class="attribute-icon teamplay" rating="3">3</span></li>
+		    		<li><span class="attribute-icon rules" rating="3">3</span></li>
+		    		<li><span class="attribute-icon humor" rating="3">3</span></li>
 		    	</ul>
 		    	</td><td>5 (שחקן מנוסה, תפקידיסט אמיתי, קבוצתי)</td><td>לפני שנה</td><td>כן, מחפש קבוצה להנחות</td></tr>
 		    	<tr><td>יוני מנדס</td><td>35 שנות אדם</td><td>
 		    	<ul class="player-attributes list-inline no-list-indent">
-		    		<li class="hospitality" rating="2">2</li>
-		    		<li class="mobility" rating="2">2</li>
-		    		<li class="teamplay" rating="2">2</li>
-		    		<li class="rules" rating="2">2</li>
-		    		<li class="humor" rating="2">2</li>
+		    		<li><span class="attribute-icon hospitality" rating="1">1</span></li>
+		    		<li><span class="attribute-icon mobility" rating="1">1</span></li>
+		    		<li><span class="attribute-icon teamplay" rating="1">1</span></li>
+		    		<li><span class="attribute-icon rules" rating="1">1</span></li>
+		    		<li><span class="attribute-icon humor" rating="1">1</span></li>
 		    	</ul>
 		    	</td><td>5 (שחקן מנוסה, תפקידיסט אמיתי, קבוצתי)</td><td>לפני שנה</td><td>כן, מחפש קבוצה להנחות</td></tr>
 		    	<tr><td>יוני מנדס</td><td>35 שנות אדם</td><td>
 		    	<ul class="player-attributes list-inline no-list-indent">
-		    		<li class="hospitality" rating="1">1</li>
-		    		<li class="mobility" rating="1">1</li>
-		    		<li class="teamplay" rating="1">1</li>
-		    		<li class="rules" rating="1">1</li>
-		    		<li class="humor" rating="1">1</li>
+		    		<li><span class="attribute-icon hospitality" rating="1">1</span></li>
+		    		<li><span class="attribute-icon mobility" rating="1">1</span></li>
+		    		<li><span class="attribute-icon teamplay" rating="1">1</span></li>
+		    		<li><span class="attribute-icon rules" rating="1">1</span></li>
+		    		<li><span class="attribute-icon humor" rating="1">1</span></li>
 		    	</ul>
 		    	</td><td>5 (שחקן מנוסה, תפקידיסט אמיתי, קבוצתי)</td><td>לפני שנה</td><td>כן, מחפש קבוצה להנחות</td></tr>
 		    </tbody>
@@ -84,9 +84,10 @@ $(function(){
 
 
   $(function() {
-    jQuery.each($( '.player-attributes li' ), function(key, item) {
+    jQuery.each($( '.player-attributes span.attribute-icon' ), function(key, item) {
         var attribute = $(item).attr('class');
         var attrValue = $(item).attr('rating');
+        attribute = attribute.match(/(hospitality|mobility|humor|teamplay|rules)/)[0];
 
         $(item).tooltip({
 	      position: {
@@ -95,7 +96,7 @@ $(function(){
 	        using: function( position, feedback ) {
 	          $( this ).css( position );
 	          $( "<div>" )
-	            .addClass( "arrow " + $(item).attr('class') )
+	            .addClass( "arrow " + attribute )
 	            .addClass( feedback.vertical )
 	            .addClass( feedback.horizontal )
 	            .appendTo( this );
@@ -110,13 +111,13 @@ $(function(){
 	            <small>"+tip.description+"</small>\
 	          </blockquote>";
 	        },
-	      tooltipClass: $(item).attr('class')
+	      tooltipClass: attribute
     	});
 
-        /* $(item).on('tooltipclose', function( event, ui ) {
+        /*$(item).on('tooltipclose', function( event, ui ) {
         	console.log(this,event,ui);
         	$(this).tooltip('open');
-        } ); */
+        } );*/
     });
   });
   </script>

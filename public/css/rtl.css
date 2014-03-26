@@ -24,3 +24,11 @@ blockquote {
 	border-left: 0;
 	border-right: 5px solid #eee;
 }
+
+ul {
+	padding-right: 0;
+}
+
+.ltr-only {
+	direction: ltr;
+}
