@@ -159,7 +159,6 @@ hr.header-line {
 }
 .info-block .info-text {
 	margin-bottom: 20px;
-	padding-right: 240px;
 }
 .info-block .info-text h3 {
 	margin-top: 0;
@@ -292,4 +291,21 @@ article {
 	padding-bottom: 0;
 	position: relative;
 	top: 4px;
+}
+
+#attributes-list li.list-group-item {
+	/* min-width: 106px; */
+}
+
+#banner-name.thumbnail {
+	padding-bottom: 14px;
+}
+	
+#banner-name h2 {
+	margin-bottom: 12px;
+}
+
+.badge-list.list-group li.list-group-item span.badge {
+	width: 55px;
+	margin-left: 10px;
 }
